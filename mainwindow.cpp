@@ -722,7 +722,14 @@ bool MainWindow::openFiles(const QStringList &names, bool globalReadWrite)
     QApplication::restoreOverrideCursor();
     if(!files.isEmpty())
     {
-        m_TsFile.readTsFile(files[0]);
+        auto isok = m_TsFile.readTsFile(files[0]);
+        if(isok)
+        {
+            auto sourcelanguage = m_TsFile.mTsFileData.sourcelanguage;
+            auto language = m_TsFile.mTsFileData.language;
+            m_messageEditor->showTransLogInfo(tr("ts file sourcelanguage: %1").arg(sourcelanguage));
+            m_messageEditor->showTransLogInfo(tr("ts file language: %1").arg(language));
+        }
     }
     return true;
 }
@@ -2215,9 +2222,9 @@ void MainWindow::setupToolBars()
 
     filet->addAction(m_ui.actionOpen);
     filet->addAction(m_ui.actionSaveAll);
-    filet->addAction(m_ui.actionClose);
-    filet->addSeparator();
     filet->addAction(m_ui.actionOpenPhraseBook);
+    filet->addAction(m_ui.actionClose);
+    filet->addAction(m_ui.actionExit);
 
     editt->addAction(m_ui.actionUndo);
     editt->addAction(m_ui.actionRedo);
@@ -2227,6 +2234,7 @@ void MainWindow::setupToolBars()
     editt->addAction(m_ui.actionPaste);
     editt->addSeparator();
     editt->addAction(m_ui.actionFind);
+    editt->addAction(m_ui.actionTranslationFileSettings);
 
     translationst->addAction(m_ui.actionPrev);
     translationst->addAction(m_ui.actionNext);
@@ -2234,10 +2242,11 @@ void MainWindow::setupToolBars()
     translationst->addAction(m_ui.actionNextUnfinished);
     translationst->addAction(m_ui.actionDone);
     translationst->addAction(m_ui.actionDoneAndNext);
-    translationst->addAction(m_ui.action_autoTranslation);
 
+    translationst->addAction(m_ui.action_autoTranslation);
     translationst->addAction(m_ui.actionRelease);
     translationst->addAction(m_ui.actionReleaseAs);
+    translationst->addAction(m_ui.action_autoTranslationSetting);
 
     validationt->addAction(m_ui.actionAccelerators);
     validationt->addAction(m_ui.actionSurroundingWhitespace);
@@ -2526,17 +2535,17 @@ void MainWindow::autoTranslationSlot(bool checked)
 {
     if(checked)
     {
-        m_ui.action_autoTranslation->setText(tr("自动翻译中..."));
         if(!BaiduFanyiPtr->isSetting())
         {
             on_action_autoTranslationSetting_triggered();
             return;
         }
 
+        m_ui.action_autoTranslation->setIcon(QIcon(tr(":/images/stopTrans.png")));
         transText();
     }else
     {
-        m_ui.action_autoTranslation->setText(tr("自动翻译"));
+        m_ui.action_autoTranslation->setIcon(QIcon(tr(":/images/autoTrans.png")));
     }
 }
 

@@ -220,6 +220,10 @@
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/quit.png</normaloff>:/images/quit.png</iconset>
+   </property>
    <property name="text">
     <string>E&amp;xit</string>
    </property>
@@ -256,6 +260,10 @@
    </property>
   </action>
   <action name="actionRelease">
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/release.png</normaloff>:/images/release.png</iconset>
+   </property>
    <property name="text">
     <string>Release</string>
    </property>
@@ -758,6 +766,10 @@
    </property>
   </action>
   <action name="actionReleaseAs">
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/release.png</normaloff>:/images/release.png</iconset>
+   </property>
    <property name="text">
     <string>Release As...</string>
    </property>
@@ -847,6 +859,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/autosetting.png</normaloff>:/images/autosetting.png</iconset>
+   </property>
    <property name="text">
     <string>Translation File &amp;Settings...</string>
    </property>
@@ -884,6 +900,10 @@
    </property>
   </action>
   <action name="actionClose">
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/close.png</normaloff>:/images/close.png</iconset>
+   </property>
    <property name="text">
     <string>Close</string>
    </property>
@@ -984,16 +1004,26 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/autoTrans.png</normaloff>:/images/autoTrans.png</iconset>
+   </property>
    <property name="text">
     <string>自动翻译</string>
    </property>
   </action>
   <action name="action_autoTranslationSetting">
+   <property name="icon">
+    <iconset resource="linguist.qrc">
+     <normaloff>:/images/transSetting.png</normaloff>:/images/transSetting.png</iconset>
+   </property>
    <property name="text">
     <string>自动翻译设置</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="linguist.qrc"/>
+ </resources>
  <connections/>
 </ui>

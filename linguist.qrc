@@ -58,5 +58,12 @@
         <file>images/win/whatsthis.png</file>
         <file>images/icons/linguist-128-32.png</file>
         <file>images/baidulange.txt</file>
+        <file>images/autosetting.png</file>
+        <file>images/autoTrans.png</file>
+        <file>images/close.png</file>
+        <file>images/quit.png</file>
+        <file>images/release.png</file>
+        <file>images/stopTrans.png</file>
+        <file>images/transSetting.png</file>
     </qresource>
 </RCC>

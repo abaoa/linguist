@@ -1,4 +1,4 @@
-#include "baidufanyisettingdialog.h"
+﻿#include "baidufanyisettingdialog.h"
 #include "ui_baidufanyisettingdialog.h"
 #include "baidufanyi.h"
 #include <QFile>
