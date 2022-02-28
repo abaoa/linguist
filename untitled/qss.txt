@@ -1,0 +1,124 @@
+QssConfig{
+	
+}
+
+CircleWidget{
+	border:1px solid gray;
+}
+
+CircleWidget QLabel#label_icon{
+	min-width:32px;
+	min-height:32px;
+	max-width:32x;
+	max-height:32px;
+}
+
+CircleWidget QLabel#label_title{
+	min-height:32px;
+	max-height:32px;
+	padding-left:5px;
+	font-size:16px;
+	color:#000;
+}
+
+CircleWidget QFrame#frame_titleBar{
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+	border:1px solid gray;
+	background:#FFF;
+	min-height:32px;
+	max-height:32px;
+}
+
+CircleWidget QFrame#frame_bottom{
+	min-height:24px;
+	max-height:24px;
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+	border:1px solid gray;
+	background:red;
+}
+
+CircleWidget QPushButton#pushButton_close{
+	border-image:url("://resource/system/ico_window-close-o_normal.png");
+	border-top-right-radius:15px;
+	min-width:48px;
+	min-height:32px;
+	max-width:48px;
+	max-height:32px;
+}
+CircleWidget QPushButton#pushButton_close:hover{
+	border-image:url("://resource/system/ico_window-close-o_hover.png");
+}
+
+CircleWidget QPushButton#pushButton_close:pressed{
+	border-image:url("://resource/system/ico_window-close-o_pressed.png");
+}
+
+CircleWidget QPushButton#pushButton_close:disabled{
+	border-image:url("://resource/system/ico_window-close-o_disabled.png");
+}
+
+
+CircleWidget QPushButton#pushButton_max:!checked{
+	border-image:url("://resource/system/ico_window-maximize_normal.png");
+	min-width:48px;
+	min-height:32px;
+	max-width:48px;
+	max-height:32px;
+}
+
+CircleWidget QPushButton#pushButton_max:!checked:hover{
+	border-image:url("://resource/system/ico_window-maximize_hover.png");
+}
+
+CircleWidget QPushButton#pushButton_max:!checked:pressed{
+	border-image:url("://resource/system/ico_window-maximize_pressed.png");
+}
+
+CircleWidget QPushButton#pushButton_max:!checked:disabled{
+	border-image:url("://resource/system/ico_window-maximize_disabled.png");
+}
+
+CircleWidget QPushButton#pushButton_max:checked{
+	border-image:url("://resource/system/ico_window-restore_normal.png");
+	min-width:48px;
+	min-height:32px;
+	max-width:48px;
+	max-height:32px;
+}
+
+CircleWidget QPushButton#pushButton_max:checked:hover{
+	border-image:url("://resource/system/ico_window-restore_hover.png");
+}
+
+CircleWidget QPushButton#pushButton_max:checked:pressed{
+	border-image:url("://resource/system/ico_window-restore_pressed.png");
+}
+
+CircleWidget QPushButton#pushButton_max:checked:disabled{
+	border-image:url("://resource/system/ico_window-restore_disabled.png");
+}
+
+
+
+
+CircleWidget QPushButton#pushButton_min{
+	border-image:url("://resource/system/ico_window-minimize_normal.png");
+	min-width:48px;
+	min-height:32px;
+	max-width:48px;
+	max-height:32px;
+}
+
+CircleWidget QPushButton#pushButton_min:hover{
+	border-image:url("://resource/system/ico_window-minimize_hover.png");
+}
+
+CircleWidget QPushButton#pushButton_min:pressed{
+	border-image:url("://resource/system/ico_window-minimize_pressed.png");
+}
+
+CircleWidget QPushButton#pushButton_min:disabled{
+	border-image:url("://resource/system/ico_window-minimize_disabled.png");
+}

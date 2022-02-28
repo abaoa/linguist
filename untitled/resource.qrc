@@ -1,5 +1,23 @@
 <RCC>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>qss.txt</file>
+        <file>resource/system/ico_window-close-o_disabled.png</file>
+        <file>resource/system/ico_window-close-o_hover.png</file>
+        <file>resource/system/ico_window-close-o_normal.png</file>
+        <file>resource/system/ico_window-close-o_pressed.png</file>
+        <file>resource/system/ico_window-maximize_disabled.png</file>
+        <file>resource/system/ico_window-maximize_hover.png</file>
+        <file>resource/system/ico_window-maximize_normal.png</file>
+        <file>resource/system/ico_window-maximize_pressed.png</file>
+        <file>resource/system/ico_window-minimize_disabled.png</file>
+        <file>resource/system/ico_window-minimize_hover.png</file>
+        <file>resource/system/ico_window-minimize_normal.png</file>
+        <file>resource/system/ico_window-minimize_pressed.png</file>
+        <file>resource/system/ico_window-restore_disabled.png</file>
+        <file>resource/system/ico_window-restore_hover.png</file>
+        <file>resource/system/ico_window-restore_normal.png</file>
+        <file>resource/system/ico_window-restore_pressed.png</file>
+    </qresource>
     <qresource prefix="/language">
         <file>language.en.qm</file>
         <file>language.zh.qm</file>
